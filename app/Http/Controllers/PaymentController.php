@@ -27,7 +27,7 @@ class PaymentController extends Controller
                 'password' => config('paystation.merchant_password')
             ];
 
-            $invoice_no = rand(111111, 999999). time();
+            $invoice_no ='AWC420'. rand(111111, 999999). time();
             $cust_name = $request->input('name');
             $cust_phone = $request->input('mobile');
             $cust_address = $request->input('address');

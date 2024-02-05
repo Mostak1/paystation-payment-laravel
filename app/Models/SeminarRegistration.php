@@ -19,5 +19,8 @@ class SeminarRegistration extends Model
         'invoice_number',
         'trx_id',
         'status',
+        'c_status',
+        'c_comment',
+        'modified_by',
     ];
 }

@@ -66,7 +66,7 @@
                 <div class="mb-4">
                     <label for="age" class="block text-gray-900 font-bold text-xl mb-2">বয়স<span
                             class="text-red-500">*</span></label>
-                    <input required type="text" id="age" name="age"
+                    <input required type="number" min="2" id="age" name="age"
                         class="w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500">
                 </div>
 

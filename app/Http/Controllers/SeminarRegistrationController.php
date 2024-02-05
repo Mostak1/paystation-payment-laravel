@@ -5,15 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\SeminarRegistration;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
+use App\DataTables\UsersDataTable;
+use Illuminate\Support\Facades\Auth;
 
 class SeminarRegistrationController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+
     public function getSeminarRegistrations()
     {
-        $registrations = SeminarRegistration::select(['id', 'name', 'mobile', 'diseases', 'address', 'age', 'comment', 'trx_id', 'status']);
+        $registrations = SeminarRegistration::select(['created_at', 'id', 'name', 'mobile', 'diseases', 'address', 'age', 'comment', 'trx_id', 'status', 'invoice_number']);
 
         return DataTables::of($registrations)
             ->addColumn('action', function ($registration) {
@@ -65,7 +68,7 @@ class SeminarRegistrationController extends Controller
     public function index()
     {
         $registrations = SeminarRegistration::get();
-        return view('home');
+        return view('home', compact('registrations'));
     }
     public function seeinfo()
     {
@@ -99,17 +102,26 @@ class SeminarRegistrationController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SeminarRegistration $seminarRegistration)
+    public function edit($id)
     {
-        //
+        $seminar = SeminarRegistration::find($id);
+        // dd($seminar);
+        return view('home-edit', compact('seminar'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, SeminarRegistration $seminarRegistration)
+    public function update(Request $request, $id)
     {
-        //
+        $seminar = SeminarRegistration::find($id);
+        $seminar->update([
+            'c_status' => $request->input('c_status'),
+            'c_comment' => $request->input('c_comment'),
+            'modified_by' => Auth::user()->name,
+        ]);
+
+        return redirect()->back()->with('success', 'Seminar details updated successfully!');
     }
 
     /**
