@@ -8,7 +8,7 @@
 @include('layouts.navigation')
   
     <div class="relative overflow-x-auto mx-8">
-        <h2 class="text-4xl text-center awcpay-header py-2 font-semibold mb-4">Seminar Registrations List</h2>
+        <h2 class="text-4xl text-center awcpay-header py-2 font-semibold mb-4">Seminar Registrations List- Paid({{$paidreg}}) and Pending({{$pendingreg}})</h2>
         <table id="dataTable" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead >
                 <tr>
@@ -34,7 +34,8 @@
                 </tr>
             </thead>
             <tbody class="text-gray-700">
-                @foreach ($registrations as $registration)
+                {{-- 01723741115 01730684696 --}}
+                @foreach ($pendingRegistrationsNotInPaid as $registration)
                     <tr>
                         <td>{{ $registration->id }}</td>
                         <td>{{ $registration->created_at->format('dM g:ia') }}</td>
@@ -44,7 +45,16 @@
                         <td>{{ $registration->address }}</td>
                         <td>{{ $registration->age }}</td>
                         <td>{{ $registration->comment }}</td>
-                        <td>{{ $registration->trx_id }}</td>
+                        <td>
+                            @php
+                            $trxId = $registration->trx_id;
+                            $chunks = str_split($trxId, 5);
+                        @endphp
+                        
+                        @foreach ($chunks as $chunk)
+                            <span class="block">{{ $chunk }}</span>
+                        @endforeach
+                        </td>
                         @if ($registration->status == 'pending')
                             
                         <td class="text-red-400">{{ $registration->status }}</td>
@@ -71,7 +81,36 @@
 
 @section('scripts')
   
-    <script>
-      
-    </script>
+<script>
+    // $(document).ready(function() {
+    //     // Function to filter rows based on status and hide duplicate pending mobile numbers
+    //     function filterRows() {
+    //         var seenMobileNumbers = {}; // Object to store unique mobile numbers
+    //         $('#registrationTable tbody tr').each(function() {
+    //             var status = $(this).find('td:nth-child(9)').text().trim(); // Get status value
+    //             var mobileNumber = $(this).find('td:nth-child(4)').text().trim(); // Get mobile number
+
+    //             // Filter rows based on status
+    //             if (status === 'paid') {
+    //                 // Show rows with status 'paid'
+    //                 $(this).show();
+    //             } else if (status === 'pending') {
+    //                 // Check if mobile number is already seen
+    //                 if (!seenMobileNumbers[mobileNumber]) {
+    //                     // If mobile number is not seen, mark it as seen and show the row
+    //                     seenMobileNumbers[mobileNumber] = true;
+    //                     $(this).show();
+    //                 } else {
+    //                     // If mobile number is already seen, hide the row
+    //                     $(this).hide();
+    //                 }
+    //             }
+    //         });
+    //     }
+
+    //     // Call the filter function when the document is ready
+    //     filterRows();
+    // });
+</script>
+
 @endsection
