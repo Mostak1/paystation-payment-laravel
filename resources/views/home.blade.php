@@ -12,7 +12,7 @@
         <table id="dataTable" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead >
                 <tr>
-                    <th colspan="15" class="tablebtn">
+                    <th colspan="16" class="tablebtn">
                     </th>
                 </tr>
                 <tr class="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
@@ -29,6 +29,7 @@
                     <th>Invoice Number</th>
                     <th>Call Status</th>
                     <th>Call Comment</th>
+                    <th>Confirm Diseases</th>
                     <th>Modified By </th>
                     <th>Action</th>
                 </tr>
@@ -65,6 +66,7 @@
                         <td>{{ $registration->invoice_number }}</td>
                         <td>{{ $registration->c_status }}</td>
                         <td>{{ $registration->c_comment }}</td>
+                        <td>{{ $registration->c_diseases }}</td>
                         <td>{{ $registration->modified_by }}</td>
                         <td>
                             <a href="{{ url('seminar/' . $registration->id . '/edit') }}"

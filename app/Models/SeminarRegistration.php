@@ -22,5 +22,6 @@ class SeminarRegistration extends Model
         'c_status',
         'c_comment',
         'modified_by',
+        'c_diseases',
     ];
 }

@@ -171,6 +171,7 @@ class SeminarRegistrationController extends Controller
         $seminar->update([
             'c_status' => $request->input('c_status'),
             'c_comment' => $request->input('c_comment'),
+            'c_diseases' => $request->input('c_diseases'),
             'modified_by' => Auth::user()->name,
         ]);
 
