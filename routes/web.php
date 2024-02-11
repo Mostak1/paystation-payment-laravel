@@ -21,6 +21,9 @@ use App\Http\Controllers\SeminarRegistrationController;
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('/landing', function () {
+    return view('landing');
+});
 Route::get('/seminar-registration', [SeminarRegistrationController::class, 'showForm']);
 Route::post('/seminar-registration', [SeminarRegistrationController::class, 'submitForm'])->name('submitForm');
 Route::post('/get-registration-information', [SeminarRegistrationController::class, 'getRegistrationInformation'])
