@@ -53,7 +53,7 @@
         .section2 {
             margin: 50px 10px;
             background-color: var(--border2);
-            padding: 50px 0px 0px 0px;
+            padding: 50px 0px 50px 0px;
             border-radius: 10px;
         }
 
@@ -84,7 +84,7 @@
 
         .section3 {
             background-color: var(--bg3);
-            padding: 100px 0 0 0;
+            padding: 100px 0 100px 0;
         }
 
         .landing3 {
@@ -101,12 +101,24 @@
             padding: 10px;
             text-align: center;
         }
-        .landing3 li{
+
+        .landing3 li {
             display: flex;
             border-bottom: 1px solid rgb(42, 36, 36);
             margin: 10px 0;
         }
-        .landing3 ul{
+
+        .landing3 ul {
+            margin-top: 40px;
+        }
+
+        .landing4 li {
+            display: flex;
+            border-bottom: 1px solid rgb(42, 36, 36);
+            margin: 10px 0;
+        }
+
+        .landing4 ul {
             margin-top: 40px;
         }
 
@@ -211,62 +223,51 @@
                         <p>ঠান্ডা জনিত সমস্যা দূর করে।</p>
                     </li>
                 </ul>
-          
-            
+
+
                 <div class="hcard">সেবনে সঠিক নিয়ম</div>
                 <ul>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>খালি পেটে এক গ্লাস পানিতে ২ চা চামচ সজনে পাতা মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>মধুর সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>দুধের সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>ডালের সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>বিভিন্ন ধরনের ভাজির সাথে মিশিয়ে খাওয়া যায়।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>পেয়ারার সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>আমড়ার সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>কাঁচা আমের সাথে মিশিয়ে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>তরকারির সাথে মিক্স করে খেতে পারেন।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>ত্বকের জন্য উপকারী।</p>
                     </li>
-                    <li> <img
-                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
+                    <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
                             alt="">
                         <p>ঠান্ডা জনিত সমস্যা দূর করে।</p>
                     </li>
@@ -279,216 +280,85 @@
                         alt=""></a>
             </div>
         </div>
-      
-       
 
-       
-        <section class="Landing__34__benifit_sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="Landing__34__benifit_content">
-                            <h2>সজিনা পাতার উপকারিতা</h2>
-                            <ul>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>উচ্চ রক্তচাপ নিয়ন্ত্রণে রাখে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>এটির এন্টি-ব্যাকটেরিয়াল বৈশিষ্ট্য বিদ্যমান। এটি যকৃত ও কিডনী সুস্থ্য রাখতে
-                                        এবং রূপের সৌন্দর্য বর্ধক হিসেবেও কাজ করে থাকে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>রক্তে কোলেস্টেরল কমায়।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>এসিডিটি বা গ্যাস্ট্রিক নিয়ন্ত্রণে রাখে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>শরীরে কোলেস্টেরল এর মাত্রা নিয়ন্ত্রণেও অন্যতম অবদান রাখে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>রক্ত স্বল্পতা দুর করে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>মানুষের শরীরের যে ৯ টি এমাইনো এসিড খাদ্যের মাধ্যমে সরবরাহ করতে হয়, তার
-                                        সবগুলোই এই সজনে পাতা গুড়ার মধ্যে বিদ্যমান।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>শরীরে সুগারের মাত্রা নিয়ন্ত্রণের মাধ্যমে ডায়াবেটিসের মত কঠিন রোগের বিরুদ্ধে
-                                        কাজ করে থাকে।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>ত্বকের জন্য উপকারী।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arrow.png"
-                                        alt="">
-                                    <p>ঠান্ডা জনিত সমস্যা দূর করে।</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                    
-                    </div>
-                    <div class="Landing__34__Button3">
-                        <div class="Order"><a href="/landing-34#placeAnOrder">অর্ডার করতে ক্লিক করুন <img
-                                    src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/hand.png"
-                                    alt=""></a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="Section__Gaps"></div>
-        <section>
-            <div class="container">
-                <div class="justify-content-center row">
-                    <div class="col-lg-6 col-12">
-                        <div class="Landing__34__Banner2">
-                            <h4>গ্রাম থেকে সংগ্রহ করা শতভাগ ন্যাচারাল সজিনা পাতা নিজেদের তত্বাবধানে স্বাস্থ্য সম্মত
-                                পরিবেশে রোদে শুকিয়ে গুড়া করা হয়।প্রোডাক্ট হাতে পেয়ে, দেখে, কোয়ালিটি চেক করে পেমেন্টে
-                                করার সুবিধা ।</h4><img
-                                src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/order-baner.png"
+        <div class="my-10">
+            <div class="p-5 text-center text-xl">গ্রাম থেকে সংগ্রহ করা শতভাগ ন্যাচারাল সজিনা পাতা নিজেদের তত্বাবধানে
+                স্বাস্থ্য সম্মত
+                পরিবেশে রোদে শুকিয়ে গুড়া করা হয়।প্রোডাক্ট হাতে পেয়ে, দেখে, কোয়ালিটি চেক করে পেমেন্টে
+                করার সুবিধা ।</div><img
+                src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/order-baner.png" alt="">
+        </div>
+
+        <div class="bg-gradiant text-center text-white pt-10">
+            <div class="landing4 p-4">
+
+                <div class="hcard">আমাদের উপর কেন আস্থা রাখবেন ??</div>
+                <div class="">
+                    <ul>
+                        <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
                                 alt="">
-                        </div>
-                    </div>
+                            <p>ধুলাবালিমুক্ত শতভাগ হাইজেনিক মেইনটেইন করে, সম্পুর্ন নিজস্ব তত্বাবধানে
+                                প্রস্তুতকৃত প্রিমিয়াম সজিনা পাতা গুড়া</p>
+                        </li>
+                        <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
+                                alt="">
+                            <p>প্রোডাক্ট হাতে পেয়ে, দেখে, কোয়ালিটি চেক করে পেমেন্টে করার সুবিধা ।</p>
+                        </li>
+                        <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
+                                alt="">
+                            <p>সারা বাংলাদেশে কুরিয়ারের মাধ্যমে হোম ডেলিভারি পাবেন ।</p>
+                        </li>
+                        <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
+                                alt="">
+                            <p>যে কোন সময় আমাদের সাথে যোগাযোগ করতে পারবেন ।</p>
+                        </li>
+                        <li> <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
+                                alt="">
+                            <p>অগ্রীম এক টাকাও দিতে হবে না। ডেলিভারি ম্যান এর কাছ থেকে প্রোডাক্ট বুঝে পেয়ে
+                                তারপর টাকা দিবেন।</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="Landing__34__benifit_content4"><img
+                            src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/moringa.png"
+                            alt=""></div>
                 </div>
             </div>
-        </section>
-        <section class="Landing__34__benifit_sec2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="Landing__34__benifit_contentDiv">
-                            <h2 class="Landing__34__benifit_contenth2">আমাদের উপর কেন আস্থা রাখবেন ??</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class=" d-flex align-items-center justify-content-between  row">
-                    <div class="col-lg-6">
-                        <div class="Landing__34__benifit_content2">
-                            <ul>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
-                                        alt="">
-                                    <p>ধুলাবালিমুক্ত শতভাগ হাইজেনিক মেইনটেইন করে, সম্পুর্ন নিজস্ব তত্বাবধানে
-                                        প্রস্তুতকৃত প্রিমিয়াম সজিনা পাতা গুড়া</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
-                                        alt="">
-                                    <p>প্রোডাক্ট হাতে পেয়ে, দেখে, কোয়ালিটি চেক করে পেমেন্টে করার সুবিধা ।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
-                                        alt="">
-                                    <p>সারা বাংলাদেশে কুরিয়ারের মাধ্যমে হোম ডেলিভারি পাবেন ।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
-                                        alt="">
-                                    <p>যে কোন সময় আমাদের সাথে যোগাযোগ করতে পারবেন ।</p>
-                                </li>
-                                <li> <img
-                                        src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/arr2.png"
-                                        alt="">
-                                    <p>অগ্রীম এক টাকাও দিতে হবে না। ডেলিভারি ম্যান এর কাছ থেকে প্রোডাক্ট বুঝে পেয়ে
-                                        তারপর টাকা দিবেন।</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="Landing__34__benifit_content4"><img
-                                src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/moringa.png"
-                                alt=""></div>
-                    </div>
-                </div>
-                <div class="Landing__34__Button3">
-                    <div class="Order"><a href="/landing-34#placeAnOrder">অর্ডার করতে ক্লিক করুন <img
-                                src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/hand.png"
-                                alt=""></a></div>
+            <div class="order">
+                <a href="/landing-34#placeAnOrder" class="flex justify-center">
+                    <span class="me-2 text-2xl font-bold text-white">অর্ডার করতে ক্লিক করুন</span>
+                    <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/hand.png"
+                        alt=""></a>
+            </div>
+        </div>
+        <div class="my-16 mx-4">
+
+
+            <div class="hcard">এতো কিছু
+                থাকতে সজিনা পাতার গুড়া কেনো খাবেন ?</div>
+        </div>
+        <div class="text-center">
+            <div class="border1">শরীরে সুগারের মাত্রা নিয়ন্ত্রণের মাধ্যমে ডায়াবেটিসের মত কঠিন রোগের বিরুদ্ধে কাজ করে
+                থাকে।</div>
+            <div class="border1">নিয়মিত সজনে পাতা খেলে মুখে রুচি বাড়ে।</div>
+            <div class="border1">লিভার ও কিডনি সুস্থ রাখতে সহায়তা করে।</div>
+            <div class="border1">উচ্চ রক্ত চাপ নিয়ন্ত্রণে থাকবে।</div>
+            <div class="border1">শরীরে বয়সের ছাপ সহজে পরে না।</div>
+            <div class="border1">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে।</div>
+            <div class="border1">ওজন কমানোর জন্য দারুণ সহায়ক হবে।</div>
+            <div class="border1">জ্বর,কাশি ও ঠান্ডা জনিত সমস্যা দূর করে।</div>
+            
+            <div class="my-10">
+                <div class="order">
+                    <a href="/landing-34#placeAnOrder" class="flex justify-center">
+                        <span class="me-2 text-2xl font-bold text-white">অর্ডার করতে ক্লিক করুন</span>
+                        <img src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/hand.png"
+                            alt=""></a>
                 </div>
             </div>
-        </section>
-        <section class="Landing__34__eat_sec2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="Landing__34__benifit_contentDiv">
-                            <h2 class="Landing__34__benifit_contenth2  Landing__34__benifit_contenth3">এতো কিছু
-                                থাকতে সজিনা পাতার গুড়া কেনো খাবেন ?</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>শরীরে সুগারের মাত্রা নিয়ন্ত্রণের মাধ্যমে ডায়াবেটিসের মত কঠিন রোগের বিরুদ্ধে কাজ করে
-                                থাকে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>নিয়মিত সজনে পাতা খেলে মুখে রুচি বাড়ে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>লিভার ও কিডনি সুস্থ রাখতে সহায়তা করে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>উচ্চ রক্ত চাপ নিয়ন্ত্রণে থাকবে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>শরীরে বয়সের ছাপ সহজে পরে না।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>ওজন কমানোর জন্য দারুণ সহায়ক হবে।</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="Landing__34__why_card">
-                            <p>জ্বর,কাশি ও ঠান্ডা জনিত সমস্যা দূর করে।</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="Landing__34__Button3">
-                    <div class="Order"><a href="/landing-34#placeAnOrder">অর্ডার করতে ক্লিক করুন <img
-                                src="https://landing-page-images-1.s3.ap-south-1.amazonaws.com/landing-34/hand.png"
-                                alt=""></a></div>
-                </div>
-            </div>
-        </section>
+        </div>
+
         <div class="Section__Gaps"></div>
         <section>
             <div class="container">
