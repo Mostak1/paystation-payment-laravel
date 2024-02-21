@@ -21,6 +21,9 @@ use App\Http\Controllers\SeminarRegistrationController;
 Route::get('/home', function () {
     return view('home');
 });
+
+Route::post('printUpdate', [SeminarRegistrationController::class, 'printUpdate'])->name('printUpdate');
+Route::get('printinfo/{id}', [SeminarRegistrationController::class, 'printinfo'])->name('printinfo');
 Route::get('/landing', function () {
     return view('landing');
 });

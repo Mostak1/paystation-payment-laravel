@@ -34,6 +34,7 @@
                     <th>Action</th>
                 </tr>
             </thead>
+            
             <tbody class="text-gray-700">
                 {{-- 01723741115 01730684696 --}}
                 @foreach ($pendingRegistrationsNotInPaid as $registration)
@@ -72,6 +73,10 @@
                             <a href="{{ url('seminar/' . $registration->id . '/edit') }}"
                                 class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400" title="Edit">
                                 edit
+                            </a>
+                            <a href="{{ url('printinfo/' . $registration->id) }}"
+                                class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400" title="Edit">
+                                Print
                             </a>
                            </td>
                     </tr>

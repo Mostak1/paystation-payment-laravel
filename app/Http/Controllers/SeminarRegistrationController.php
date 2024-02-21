@@ -14,7 +14,31 @@ class SeminarRegistrationController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function printinfo($id)
+    {
+        // Retrieve registration information based on mobile and trx_id
+        $printinfo = SeminarRegistration::find($id);
 
+        if ($printinfo) {
+            // Return HTML with registration information
+            return view('printinfo', compact('printinfo'));
+        } else {
+            // Return an error message
+            return 'Registration not found.';
+        }
+    }
+    public function printUpdate(Request $request)
+    {
+        $seminar = SeminarRegistration::find($request->id);
+        $seminar->update([
+            'c_status' => $request->c_status,
+            'c_comment' => $request->c_comment,
+            'c_diseases' => $request->c_diseases,
+            'modified_by' => Auth::user()->name,
+        ]);
+
+        return redirect()->route('seminar.index')->with('success', 'Seminar details updated successfully!');
+    }
     public function getSeminarRegistrations()
     {
         $registrations = SeminarRegistration::select(['created_at', 'id', 'name', 'mobile', 'diseases', 'address', 'age', 'comment', 'trx_id', 'status', 'invoice_number']);
@@ -106,7 +130,7 @@ class SeminarRegistrationController extends Controller
 
         // Fetch pending registrations and filter them in memory
         $pendingRegistrations = SeminarRegistration::where('status', 'pending')->get();
-      
+
 
         // Merge paid and filtered pending registrations
         $registrations = SeminarRegistration::get();
@@ -117,10 +141,10 @@ class SeminarRegistrationController extends Controller
         // Filter $pendingMobileNumbers to exclude those present in $uniquePaidMobileNumbers
         $pendingRegistrationsNotInPaid = $pendingRegistrations->whereNotIn('mobile', $uniquePaidMobileNumbers)->unique('mobile');
 
-      
-        
 
-        return view('home', compact('pendingRegistrationsNotInPaid','registrations', 'paidreg', 'pendingreg'));
+
+
+        return view('home', compact('pendingRegistrationsNotInPaid', 'registrations', 'paidreg', 'pendingreg'));
     }
 
     public function seeinfo()
