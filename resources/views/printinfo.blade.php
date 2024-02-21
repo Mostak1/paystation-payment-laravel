@@ -14,6 +14,17 @@
             display: none;
         }
 
+        .foodcard {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 10px;
+            border: 3px solid green;
+            border-style: dashed;
+            border-radius: 10px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+
         @media print {
             .print-hidden {
                 display: none;
@@ -45,51 +56,114 @@
                 </button>
                 <a href="{{ url('/seminar') }}" class="text-blue-500">Back</a>
             </div>
-            <div class="items-center my-8">
-                <img src="{{ asset('assets/haquesir.jpg') }}" alt="">
+            <div class="page1">
+
+
+                <div class="items-center my-8">
+                    <img src="{{ asset('assets/haquesir.jpg') }}" alt="">
+                </div>
+
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-gray-600">Serial Number:</p>
+                        <p class="font-semibold">{{ $printno->id + 1 }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">Registration Number:</p>
+                        <p class="font-semibold">{{ $printinfo->id }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">Name:</p>
+                        <p class="font-semibold">{{ $printinfo->name }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Mobile:</p>
+                        <p class="font-semibold">{{ $printinfo->mobile }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Diseases:</p>
+                        <p class="font-semibold">{{ $printinfo->diseases }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Address:</p>
+                        <p class="font-semibold">{{ $printinfo->address }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Invoice Number:</p>
+                        <p class="font-semibold">{{ $printinfo->invoice_number }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Age:</p>
+                        <p class="font-semibold">{{ $printinfo->age }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Status:</p>
+                        <p class="font-semibold">{{ $printinfo->status }}</p>
+                    </div>
+                </div>
             </div>
-            <div class="items-center my-8">
-                <!--<h2 class="text-3xl font-semibold text-center underline">Dr. Haque's Health Seminar</h2>-->
-            </div>
+            <div class="page2">
 
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <p class="text-gray-600">Serial Number:</p>
-                    <p class="font-semibold">{{ $printinfo->id }}</p>
-                </div>
-                <div>
-                    <p class="text-gray-600">Name:</p>
-                    <p class="font-semibold">{{ $printinfo->name }}</p>
+
+                <div class="items-center my-8">
+                    <img src="{{ asset('assets/haquesir.jpg') }}" alt="">
                 </div>
 
-                <div>
-                    <p class="text-gray-600">Mobile:</p>
-                    <p class="font-semibold">{{ $printinfo->mobile }}</p>
-                </div>
 
-                <div>
-                    <p class="text-gray-600">Diseases:</p>
-                    <p class="font-semibold">{{ $printinfo->diseases }}</p>
-                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-gray-600">Serial Number:</p>
+                        <p class="font-semibold">{{ $printno->id + 1 }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">Registration Number:</p>
+                        <p class="font-semibold">{{ $printinfo->id }}</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600">Name:</p>
+                        <p class="font-semibold">{{ $printinfo->name }}</p>
+                    </div>
 
-                <div>
-                    <p class="text-gray-600">Address:</p>
-                    <p class="font-semibold">{{ $printinfo->address }}</p>
-                </div>
+                    <div>
+                        <p class="text-gray-600">Mobile:</p>
+                        <p class="font-semibold">{{ $printinfo->mobile }}</p>
+                    </div>
 
-                <div>
-                    <p class="text-gray-600">Invoice Number:</p>
-                    <p class="font-semibold">{{ $printinfo->invoice_number }}</p>
-                </div>
+                    <div>
+                        <p class="text-gray-600">Diseases:</p>
+                        <p class="font-semibold">{{ $printinfo->diseases }}</p>
+                    </div>
 
-                <div>
-                    <p class="text-gray-600">Age:</p>
-                    <p class="font-semibold">{{ $printinfo->age }}</p>
-                </div>
+                    <div>
+                        <p class="text-gray-600">Address:</p>
+                        <p class="font-semibold">{{ $printinfo->address }}</p>
+                    </div>
 
-                <div>
-                    <p class="text-gray-600">Status:</p>
-                    <p class="font-semibold">{{ $printinfo->status }}</p>
+                    <div>
+                        <p class="text-gray-600">Invoice Number:</p>
+                        <p class="font-semibold">{{ $printinfo->invoice_number }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Age:</p>
+                        <p class="font-semibold">{{ $printinfo->age }}</p>
+                    </div>
+
+                    <div>
+                        <p class="text-gray-600">Status:</p>
+                        <p class="font-semibold">{{ $printinfo->status }}</p>
+                    </div>
+                </div>
+                <div class="foodcard items-center my-8">
+
+                    Food Token
                 </div>
             </div>
         </div>

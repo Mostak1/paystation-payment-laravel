@@ -65,7 +65,11 @@
                         <td>{{ $registration->status }}</td>
                         @endif
                         <td>{{ $registration->invoice_number }}</td>
+                        @if ($registration->c_status == 'Ticket Generated')
+                        <td class="text-red-400">{{ $registration->c_status }}</td>
+                        @else
                         <td>{{ $registration->c_status }}</td>
+                        @endif
                         <td>{{ $registration->c_comment }}</td>
                         <td>{{ $registration->c_diseases }}</td>
                         <td>{{ $registration->modified_by }}</td>

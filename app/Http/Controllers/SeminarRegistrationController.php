@@ -6,6 +6,7 @@ use App\Models\SeminarRegistration;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use App\DataTables\UsersDataTable;
+use App\Models\PrintSerial;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,10 +19,11 @@ class SeminarRegistrationController extends Controller
     {
         // Retrieve registration information based on mobile and trx_id
         $printinfo = SeminarRegistration::find($id);
+        $printno = PrintSerial::latest()->get()->last();
 
         if ($printinfo) {
             // Return HTML with registration information
-            return view('printinfo', compact('printinfo'));
+            return view('printinfo', compact('printinfo','printno'));
         } else {
             // Return an error message
             return 'Registration not found.';
@@ -36,6 +38,9 @@ class SeminarRegistrationController extends Controller
             'c_diseases' => $request->c_diseases,
             'modified_by' => Auth::user()->name,
         ]);
+        $printId = new PrintSerial();
+        $printId->reg_id = $request->id;
+        $printId->save();
 
         return redirect()->route('seminar.index')->with('success', 'Seminar details updated successfully!');
     }
