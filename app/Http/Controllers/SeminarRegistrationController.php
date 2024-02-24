@@ -128,6 +128,7 @@ class SeminarRegistrationController extends Controller
     public function index()
     {
         $paidreg = SeminarRegistration::where('status', 'paid')->count();
+        $paid = SeminarRegistration::where('status', 'paid')->get();
         $pendingreg = SeminarRegistration::where('status', 'pending')->count();
 
         // Fetch paid registrations directly from the database
@@ -149,7 +150,7 @@ class SeminarRegistrationController extends Controller
 
 
 
-        return view('home', compact('pendingRegistrationsNotInPaid', 'registrations', 'paidreg', 'pendingreg'));
+        return view('home', compact('pendingRegistrationsNotInPaid', 'registrations', 'paidreg','paid', 'pendingreg'));
     }
 
     public function seeinfo()
