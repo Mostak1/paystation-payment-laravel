@@ -34,6 +34,7 @@
 </head>
 
 <body class="">
+    @include('layouts.navigation')
     @yield('content')
     @include('flash')
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

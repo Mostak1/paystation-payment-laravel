@@ -19,7 +19,7 @@
 
 
         <div class="max-w-md mx-auto awcbg opacity-8 p-6 rounded-md shadow-xl ">
-            <h2 class="text-2xl text-white font-semibold mb-6 text-center">Dr. Haque's Seminar Registration Form</h2>
+            <h2 class="text-2xl text-white font-semibold mb-6 text-center">Cash Payment</h2>
             <div class="text-white text-center">Islam Tower,2nd floor, Shukrabad (Bus Stand), Dhaka, Bangladesh
 
                 email: awc.health@gmail.com
@@ -66,7 +66,7 @@
                 <div class="mb-4">
                     <label for="age" class="block text-gray-900 font-bold text-xl mb-2">বয়স<span
                             class="text-red-500">*</span></label>
-                    <input required type="number" min="2" id="age" name="age"
+                    <input required type="text" id="age" name="age"
                         class="w-full border-gray-300 rounded-md p-2 focus:outline-none focus:border-blue-500">
                 </div>
 
@@ -81,7 +81,7 @@
                 <div class="text-center">
                     <button type="submit" id="submitBtn"
                         class="bg-purple-600 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">
-                        Pay Now 1000Tk
+                        Received 1000Tk Cash
                     </button>
                 </div>
             </form>

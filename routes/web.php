@@ -21,12 +21,17 @@ use App\Http\Controllers\SeminarRegistrationController;
 Route::get('/home', function () {
     return view('home');
 });
+Route::get('welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::post('printUpdate', [SeminarRegistrationController::class, 'printUpdate'])->name('printUpdate');
 Route::get('printinfo/{id}', [SeminarRegistrationController::class, 'printinfo'])->name('printinfo');
 Route::get('/landing', function () {
     return view('landing');
 });
+Route::get('serialInfo', [SeminarRegistrationController::class, 'serialInfo'])->name('serialInfo');
+Route::get('paidRegistration', [SeminarRegistrationController::class, 'paidRegistration'])->name('paidRegistration');
 Route::get('/seminar-registration', [SeminarRegistrationController::class, 'showForm']);
 Route::post('/seminar-registration', [SeminarRegistrationController::class, 'submitForm'])->name('submitForm');
 Route::post('/get-registration-information', [SeminarRegistrationController::class, 'getRegistrationInformation'])

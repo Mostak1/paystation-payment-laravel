@@ -2,7 +2,7 @@
 @section('styles')
 @endsection
 @section('content')
-    @include('layouts.navigation')
+   
 
     <h2 class="text-4xl text-center awcpay-header py-2 font-semibold mb-4">Seminar Registrations List-
         Paid({{ $paidreg }}) and Pending({{ $pendingreg }}) </h2>
@@ -144,11 +144,7 @@
                             title="Edit">
                             Update
                         </a>
-                        <a href="{{ url('printinfo/' . $registration->id) }}"
-                            class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
-                            title="Edit">
-                            Print
-                        </a>
+                    
                     </td>
                     <td>{{ $registration->created_at->format('dM g:ia') }}</td>
                     <td>{{ $registration->name }}</td>
@@ -203,7 +199,7 @@
             </tbody>
         </table>
     </div>
-    <h2 class="text-4xl text-center awcpay-header py-2 font-semibold my-4">Seminar Registrations List LL </h2>
+    <h2 class="text-4xl text-center awcpay-header py-2 font-semibold my-4">Seminar Registrations List All </h2>
     <div class="relative overflow-x-auto mx-8">
         <table id="dataTable2" class="dataTable2 w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead>
@@ -242,11 +238,7 @@
                             title="Edit">
                             Update
                         </a>
-                        <a href="{{ url('printinfo/' . $registration->id) }}"
-                            class="bg-green-100 text-green-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-green-400 border border-green-400"
-                            title="Edit">
-                            Print
-                        </a>
+                       
                     </td>
                     <td>{{ $registration->created_at->format('dM g:ia') }}</td>
                     <td>{{ $registration->name }}</td>

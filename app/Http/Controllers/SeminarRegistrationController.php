@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 use App\DataTables\UsersDataTable;
 use App\Models\PrintSerial;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,15 +16,24 @@ class SeminarRegistrationController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function serialInfo(){
+        $currentDate = Carbon::now();
+        
+        $printno = PrintSerial::whereDate('created_at', $currentDate)->count();
+        $printSerial = PrintSerial::with('reg')->whereDate('created_at', $currentDate)->get();
+        return view('serialinfo', compact('printno','printSerial' ));
+    }
     public function printinfo($id)
     {
         // Retrieve registration information based on mobile and trx_id
+        // $printinfo = SeminarRegistration::find($id);
+        // $printno = PrintSerial::latest()->get()->last();
+        $currentDate = Carbon::now();
         $printinfo = SeminarRegistration::find($id);
-        $printno = PrintSerial::latest()->get()->last();
-
+        $printno = PrintSerial::whereDate('created_at', $currentDate)->count();
         if ($printinfo) {
             // Return HTML with registration information
-            return view('printinfo', compact('printinfo','printno'));
+            return view('printinfo', compact('printinfo', 'printno'));
         } else {
             // Return an error message
             return 'Registration not found.';
@@ -40,6 +50,7 @@ class SeminarRegistrationController extends Controller
         ]);
         $printId = new PrintSerial();
         $printId->reg_id = $request->id;
+        $printId->p_serial = $request->p_serial;
         $printId->save();
 
         return redirect()->route('seminar.index')->with('success', 'Seminar details updated successfully!');
@@ -59,13 +70,12 @@ class SeminarRegistrationController extends Controller
     public function getRegistrationInformation(Request $request)
     {
         // Retrieve registration information based on mobile and trx_id
-        $registration = SeminarRegistration::where('mobile', $request->input('mobile'))
-            ->where('trx_id', $request->input('trx_id'))
-            ->first();
+        $registrations = SeminarRegistration::where('mobile', $request->input('mobile'))
+            ->get();
 
-        if ($registration) {
+        if ($registrations) {
             // Return HTML with registration information
-            return view('registration-information', compact('registration'));
+            return view('registration-information', compact('registrations'));
         } else {
             // Return an error message
             return 'Registration not found.';
@@ -95,36 +105,14 @@ class SeminarRegistrationController extends Controller
             # code...
         }
     }
-    // public function index()
-    // {
+    
+    public function paidRegistration()
+    {
+        $paidreg = SeminarRegistration::where('status', 'paid')->count();
+        $paid = SeminarRegistration::where('status', 'paid')->get();
 
-    //     $paidreg = SeminarRegistration::where('status', 'paid')->count();
-    //     $pendingreg = SeminarRegistration::where('status', 'pending')->count();
-    //     $registrations = SeminarRegistration::get();
-    //     $filteredRegistrations = new Collection();
-
-    //     // Keep track of unique mobile numbers for pending registrations
-    //     $seenMobileNumbers = [];
-
-    //     // Iterate over each registration
-    //     foreach ($registrations as $registration) {
-    //         // Check the status of the registration
-    //         if ($registration->status == 'paid') {
-    //             // For paid registrations, add them directly to the filtered collection
-    //             $filteredRegistrations->push($registration);
-    //         } elseif ($registration->status == 'pending') {
-    //             // For pending registrations, check if the mobile number is already seen
-    //             $mobileNumber = $registration->mobile;
-    //             if (!in_array($mobileNumber, $seenMobileNumbers)) {
-    //                 // If mobile number is not seen, add the registration to the filtered collection
-    //                 $filteredRegistrations->push($registration);
-    //                 // Mark the mobile number as seen
-    //                 $seenMobileNumbers[] = $mobileNumber;
-    //             }
-    //         }
-    //     }
-    //     return view('home', compact('registrations', 'paidreg', 'pendingreg','filteredRegistrations'));
-    // }
+        return view('paid-registration', compact('paidreg', 'paid'));
+    }
     public function index()
     {
         $paidreg = SeminarRegistration::where('status', 'paid')->count();
@@ -150,7 +138,7 @@ class SeminarRegistrationController extends Controller
 
 
 
-        return view('home', compact('pendingRegistrationsNotInPaid', 'registrations', 'paidreg','paid', 'pendingreg'));
+        return view('home', compact('pendingRegistrationsNotInPaid', 'registrations', 'paidreg', 'paid', 'pendingreg'));
     }
 
     public function seeinfo()
@@ -198,15 +186,56 @@ class SeminarRegistrationController extends Controller
     public function update(Request $request, $id)
     {
         $seminar = SeminarRegistration::find($id);
-        $seminar->update([
-            'c_status' => $request->input('c_status'),
-            'c_comment' => $request->input('c_comment'),
-            'c_diseases' => $request->input('c_diseases'),
-            'modified_by' => Auth::user()->name,
-        ]);
+
+        if ($request->has('status')) {
+            $seminar->status = $request->input('status');
+        }
+
+        if ($request->has('c_status')) {
+            $seminar->c_status = $request->input('c_status');
+        }
+
+        if ($request->has('c_comment')) {
+            $seminar->c_comment = $request->input('c_comment');
+        }
+
+        if ($request->has('c_diseases')) {
+            $seminar->c_diseases = $request->input('c_diseases');
+        }
+
+        if ($request->has('name')) {
+            $seminar->name = $request->input('name');
+        }
+
+        if ($request->has('mobile')) {
+            $seminar->mobile = $request->input('mobile');
+        }
+
+        if ($request->has('diseases')) {
+            $seminar->diseases = $request->input('diseases');
+        }
+
+        if ($request->has('address')) {
+            $seminar->address = $request->input('address');
+        }
+
+        if ($request->has('age')) {
+            $seminar->age = $request->input('age');
+        }
+
+        if ($request->has('comment')) {
+            $seminar->comment = $request->input('comment');
+        }
+
+        // Set the modified_by field
+        $seminar->modified_by = Auth::user()->name;
+
+        $seminar->save();
 
         return redirect()->back()->with('success', 'Seminar details updated successfully!');
     }
+
+
 
     /**
      * Remove the specified resource from storage.

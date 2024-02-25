@@ -10,6 +10,10 @@ class PrintSerial extends Model
 {
     use HasFactory,SoftDeletes;
     protected $fillable = [
-      'reg_id'
+      'reg_id','p_serial',
     ];
+
+    public function reg(){
+      return $this->belongsTo(SeminarRegistration::class,'reg_id');
+    }
 }

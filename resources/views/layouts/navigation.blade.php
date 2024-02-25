@@ -21,6 +21,21 @@
                       Registration List
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
+                      Cash Payment
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('paidRegistration')" :active="request()->routeIs('paidRegistration')">
+                     Paid  Registration List
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('serialInfo')" :active="request()->routeIs('serialInfo')">
+                     Serial Generated Information
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
